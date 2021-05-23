@@ -1,0 +1,466 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    
+    <title>Android Development Course</title>
+    <meta name="description" content="Online Course">
+    <meta name="author" content="Akash">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+    <!--header section-->
+    <header>
+        <!--Navigation Bar-->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color:#05192d;">
+            <div class="container">
+                <a class="navbar-brand" href="#">AKC</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="nav navbar-nav mr-auto">
+                        <li class="nav-item-active">
+                            <a class="nav-link" href="#learnings">Learnings</a>
+                        </li>
+                        <li class="nav-item-active">
+                            <a class="nav-link" href="#projects">Projects</a>
+                        </li>
+                        <li class="nav-item-active">
+                            <a class="nav-link" href="#courseLeads">Course Leads</a>
+                        </li>
+                        <li class="nav-item-active">
+                            <a class="nav-link" href="#reviews">Reviews</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!--Sign up Modal-->
+        <div class="signUpModal" id="signUpModal">
+        <div class="signUpModal-header">
+            <div class="title">AKC</div>
+            <button data-close-button class="close-button">&times;</button>
+        </div>
+        <div class="signUpModal-body">
+            <center><b>Sign up</b></center>
+            <br />
+            <form>
+                <input type="text" pattern="[a-zA-Z][a-zA-Z\s]{2,15}" placeholder="UserName*" id="username" required />
+                <input type="text" pattern="[A-Za-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"placeholder="E-mail*" id="email" required />
+                <input type="text" pattern="[6789][0-9]{9}" placeholder="PhoneNumber*" id="phonenumber" required/>
+                <br /><br />
+                <input type="button" class="btn btn-primary" value="Sign up" onclick="userSignUp()" />
+            </form>
+            <hr />
+            <center>
+                <b>OR</b><br /><br />
+                <i class="fab fa-google"></i> &emsp; &emsp;  <i class="fab fa-facebook-f"></i> &emsp; &emsp;  <i class="fab fa-twitter"></i> &emsp; &emsp;  <i class="fab fa-linkedin-in"></i>
+            </center>
+        </div>
+    </div>
+    <div id="overlay"></div>
+    </header>
+
+    <!--Jumbotron start-->
+    <div class="jumbotron jumbotronDetails">
+        <div class="container">
+            <div class="row">
+                <!--Course Heading Section-->
+                <div class="col-md-7 col-12">
+                    <div class="heading">
+                        <h5 class="freeCourse">FREE COURSE</h5>
+                        <h1 class="courseName">Android App Development Specialization</h1>
+                        <h5 class="intro">Launch your android app development career. Master the knowledge and skills to develop maintainable mobile computing apps.</h5>
+                        <br /><button type="button" data-modal-target="#signUpModal" id="signUp">Start Now</button>
+                        <br />
+                        <div class="row courseCards">
+                            <div class="courseCard">
+                                <span class="details"><span class="fas fa-clock"></span> <br>15<br>Hours</span>
+                            </div>
+                            <div class="courseCard">
+                                <span class="details"><i class="fas fa-play-circle"></i><br>27<br>Videos</span>
+                            </div>
+                            <div class="courseCard">
+                                <span class="details"><i class="fas fa-code"></i><br>37<br>Exercises</span>
+                            </div>
+                            <div class="courseCard">
+                                <span class="details"><i class="fas fa-user-plus"></i><br>6,31,500<br>Learners</span>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <h6>Created&nbsp;By <u>Rob&nbsp;Pervical</u>, <u>Xiao&nbsp;Fan</u>, <u>Codestars&nbsp;by&nbsp;Rob&nbsp;Pervical</u></h6>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <h6>Last updated 9/2020</h6>
+                        </div>
+                        <br />
+                        <div class="row justify-content-center">
+                            <input class="btn btn-primary choiceBtn" type="button" value="Wishlist"/>&emsp;
+                            <input class="btn btn-primary choiceBtn" type="button" value="Share" />&emsp;
+                            <input class="btn btn-primary choiceBtn" type="button" value="Gift" />
+                        </div>
+                        <br />
+                        <br />
+                    </div>
+                </div>
+                <!--Company Logo Section-->
+                <div class="col-md-5 col-12 companyLogo">
+                    <div class="display-5">
+                        Offered By
+                    </div>
+                    <div class="display-4">
+                        AKC
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Main Section-->
+    <main>
+        <div class="container">
+
+            <!--Row of About Us And Certificate-->
+            <div class="row">
+                <div class="col-md-8 col-12 aboutCourse">
+                    <h2 class="display-6 aboutCourseHead">About This Course</h2>
+                    <h5>
+                        <br />
+                        As the first course in the Android Developer Nanodegree, Developing Android Apps is the foundation of our advanced Android Curriculum. This course
+                        blends theory and practice to help you build great apps the right way. In this course, you'll work with instructors step-by-step to build Android 
+                        apps and learn best practice of mobile development and Android development in particular.
+                    </h5>
+                </div>
+                <div class="col-md-4 col-12 certificateDiv">
+                    <h3>Shareable Certificate</h3>
+                    <br />
+                    <img src="images/Certificate/certificate.jpg" id="certificate"/>
+                </div>
+            </div>
+
+            <!--Learning Section-->
+            <div class="row learningHeading" id="learnings">
+                <h2 class="display-6 aboutCourseHead">What will you learn ?</h2>
+            </div>
+            <div class="row learning">
+                <div class="col-sm-2 learnNumber">
+                    1
+                </div>
+                <div class="col-sm-10 learnContent">
+                    <h4><b>Android and Java Foundations</b></h4>
+                    <h6>Get started with Android and Java</h6>
+                </div>
+            </div>
+            <div class="row learning">
+                <div class="col-sm-2 learnNumber">
+                    2
+                </div>
+                <div class="col-sm-10 learnContent">
+                    <h4><b>Wireframing, Java and Android Studio</b></h4>
+                    <h6>Wireframe your first app, learn about basic concepts in Java and dig into the Android Studio IDE</h6>
+                </div>
+            </div>
+            <div class="row learning">
+                <div class="col-sm-2 learnNumber">
+                    3
+                </div>
+                <div class="col-sm-10 learnContent">
+                    <h4><b>Android App Development</b></h4>
+                    <h6>Really dig into Android development fundamentals by working with Android Layouts & Views and handling user interactions</h6>
+                </div>
+            </div>
+            <div class="row learning">
+                <div class="col-sm-2 learnNumber">
+                    4
+                </div>
+                <div class="col-sm-10 learnContent">
+                    <h4><b>Intermediate Java and Capstone Project</b></h4>
+                    <h6>Pick up more Java programming skills and complete your OWN application</h6>
+                </div>
+            </div>
+            <!--Start Now Button-->
+            <div class="row justify-content-center" style="margin-top:80px;">
+                <button type="button" data-modal-target="#signUpModal" id="signUp">Start Now</button>
+            </div>
+
+            <!--Project Section-->
+            <div class="row learningHeading" id="projects">
+                <h2 class="display-6 aboutCourseHead">What projects will you build ?</h2>
+            </div>
+            <div class="row projectDiv">
+                <div class="col-md-3 col-11 projects">
+                    <br />
+                    <img src="images/Projects/bug-invader.jpg" class="projectPicture" />
+                    
+                    <h6><br /><b>Bug Invaders</b></h6>
+                    <p>
+                        Re-create an arcade classic: Space Invader !
+                    </p>
+                </div>
+                <div class="col-md-3 col-11 projects">
+                    <br />
+                    <img src="images/Projects/treasure-hunter.png" class="projectPicture" />
+                    <h6><br /><b>Treasure Hunter</b></h6>
+                    <p>
+                        Dig for the treasure by looping through various arrays !
+                    </p>
+                </div>
+                <div class="col-md-3 col-11 projects">
+                    <br />
+                    <img src="images/Projects/business-project.jpg" class="projectPicture" />
+                    <h6><br /><b>Business Outfitted Alice</b></h6>
+                    <p>
+                        Create an outfit simulation game
+                    </p>
+                </div>
+            </div>
+
+            <!--Course Leads Section-->
+            <div class="row learningHeading" id="courseLeads">
+                <h2 class="display-6 aboutCourseHead">Course Leads</h2>
+            </div>
+            <!--First Row-->
+            <div class="row">
+                <div class="col-lg-6 col-12 teachCenter">
+                    <div class="row">
+                        <div class="col-md-3 col-12">
+                            <center>
+                                <img src="images/Teachers/teach1.jpg" class="teacherPicture" />
+                            </center>
+                        </div>
+                        <div class="col-md-9 col-12 teachDetails">
+                            <h6><br /><b style="color:black;">Rob Percival</b></h6>
+                            <h6>Professor of the Practice</h6>
+                            <span>
+                                Electrical Engineering and Computer Science
+                                <br />
+                                <i class="fas fa-star"></i>
+                                4.3/5
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12 teachCenter">
+                    <div class="row">
+                        <div class="col-md-3 col-12">
+                            <center>
+                                <img src="images/Teachers/teach2.jpg" class="teacherPicture" />
+                            </center>
+                        </div>
+                        <div class="col-md-9 col-12 teachDetails">
+                            <h6><br /><b style="color:black;">Dr. Julie Johnson</b></h6>
+                            <h6>Instructor</h6>
+                            <span>
+                                EECS
+                                <br />
+                                <i class="fas fa-star"></i>
+                                4.7/5
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Second Row-->
+            <div class="row">
+                <div class="col-lg-6 col-12 teachCenter">
+                    <div class="row">
+                        <div class="col-md-3 col-12">
+                            <center>
+                                <img src="images/Teachers/teach3.jfif" class="teacherPicture" />
+                            </center>
+                        </div>
+                        <div class="col-md-9 col-12 teachDetails">
+                            <h6><br /><b style="color:black;">Xiao Fan</b></h6>
+                            <h6>Associate Professor of Computer Science</h6>
+                            <span>
+                                Electrical Engineering and Computer Science
+                                <br />
+                                <i class="fas fa-star"></i>
+                                4.93/5
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12 teachCenter">
+                    <div class="row">
+                        <div class="col-md-3 col-12">
+                            <center>
+                                <img src="images/Teachers/teach4.jpg" class="teacherPicture" />
+                            </center>
+                        </div>
+                        <div class="col-md-9 col-12 teachDetails">
+                            <h6><br /><b style="color:black;">Micheal Walker</b></h6>
+                            <h6>Instructor - Graduate Student pursuing PhD in Computer Science</h6>
+                            <span>
+                                EECS
+                                <br />
+                                <i class="fas fa-star"></i>
+                                4.1/5
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Third Row-->
+            <div class="row">
+                <div class="col-lg-6 col-12 teachCenter">
+                    <div class="row">
+                        <div class="col-md-3 col-12">
+                            <center>
+                                <img src="images/Teachers/teach5.jfif" class="teacherPicture" />
+                            </center>
+                        </div>
+                        <div class="col-md-9 col-12 teachDetails">
+                            <h6><br /><b style="color:black;">Dr. Douglas C. Schmidt</b></h6>
+                            <h6>Professor of Computer Science</h6>
+                            <span>
+                                Electrical Engineering and Computer Science
+                                <br />
+                                <i class="fas fa-star"></i>
+                                4.6/5
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Reviews-->
+            <div class="row learningHeading" id="reviews">
+                <h2 class="display-6 aboutCourseHead">What the learners have to say</h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-5 col-11 reviewBox">
+                    <h6><br /><b>Lloyd Nsiah</b></h6>
+                    <i><br />Highly recomended for those who want to start learning Android development.</i>
+                </div>
+                <div class="col-md-5 col-11 reviewBox">
+                    <h6><br /><b>Sam Rishi</b></h6>
+                    <i><br />It is a perfect course for beginners who are seeking to learn both java as well as app development. And each and every topics are explained clearly in the sessions.
+                    And I loved this course as it was the perfect match I was searching for !</i>
+                </div>
+            </div>
+            <br />
+            <div class="row justify-content-center">
+                <div class="col-md-5 col-11 reviewBox">
+                    <h6><br /><b>Naveen G.M.</b></h6>
+                    <i><br />This was my first exposure to Android programming and it gave me a good fillip in my learning.</i>
+                </div>
+            </div>
+        </div>
+
+        <!--Section of Greatness-->
+        <div class="askUser">
+            <b class="display-6">Join the Path to Greatness</b>
+            <br />
+            <br />
+            <button type="button" data-modal-target="#signUpModal" id="signUp">Start Now</button>
+        </div>
+    </main>
+
+    <!--Footer Section-->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-2 col-lg-12">
+                    <br />
+                    <span class="display-6">AKC</span>
+                    <br />
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                    <h5 style="color:#03ef62;"><b><u>Learn</u></b></h5>
+                    <br />
+                    <ul>
+                        <li>Python</li>
+                        <li>R</li>
+                        <li>C++</li>
+                        <li>SQL</li>
+                    </ul>
+                    <br />
+                    <br />
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                    <h5 style="color:#03ef62;"><b><u>Resources</u></b></h5>
+                    <br />
+                    <ul>
+                        <li>Resource Center</li>
+                        <li>Events</li>
+                        <li>Blog</li>
+                        <li>Open Source</li>
+                    </ul>
+                    <br />
+                    <br />
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                    <h5 style="color:#03ef62;"><b><u>Plans</u></b></h5>
+                    <br />
+                    <ul>
+                        <li>Pricing</li>
+                        <li>For Business</li>
+                        <li>For Classrooms</li>
+                        <li>Donations</li>
+                    </ul>
+                    <br />
+                    <br />
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                    <h5 style="color:#03ef62;"><b><u>About</u></b></h5>
+                    <br />
+                    <ul>
+                        <li>About Us</li>
+                        <li>Learner Stories</li>
+                        <li>Careers</li>
+                        <li>Press</li>
+                        <li>Leadership</li>
+                        <li>Contact Us</li>
+                    </ul>
+                    <br />
+                    <br />
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                    <h5 style="color:#03ef62;"><b><u>Support</u></b></h5>
+                    <br />
+                    <ul>
+                        <li>Help Center</li>
+                        <li>Become an&nbsp;Instructor</li>
+                        <li>Become an&nbsp;Affiliate</li>
+                        <li>Become a&nbsp;Partner</li>
+                    </ul>
+                    <br />
+                    <br />
+                </div>
+            </div>
+            <!--bottom content of footer-->
+            <div class="row">
+                <div class="col-lg-8 col-md-12 bottomContent">
+                <span>Privacy Policy &emsp; Cookie Notice &emsp; Accessibility &emsp; Security &emsp; Terms&nbsp;of&nbsp;Use</span>
+                </div>
+                <div class="col-lg-4 col-md-12 bottomContent">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a> &emsp; &emsp;  <a href="#"><i class="fab fa-twitter"></i></a> &emsp; &emsp;  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    &emsp;  &emsp; <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+
+                
+            </div>
+            <span style="font-size:12px; color:gray;"><br />&#169 2021 AKC Inc. All Rights Reserved.</span>
+        </div>
+    </footer>
+
+    <!--Scripts Used-->
+    <script src="./js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+</body>
+</html>

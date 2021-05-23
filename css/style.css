@@ -1,0 +1,345 @@
+﻿@media (max-width: 768px)
+{
+    .teachCenter
+    {
+        text-align:center;
+    }
+    .teachDetails
+    {
+        padding-right:50px;
+    }
+    footer
+    {
+        text-align:center;
+    }
+    .signUpModal
+    {
+        min-width:80%;
+        min-height:80%;
+    }
+    .companyLogo
+    {
+        padding: 0 !important;
+    }
+}
+@media (max-width:400px)
+{
+    .details
+    {
+        font-size:10px;
+    }
+}
+body
+{
+    color:black;
+    font-family:sans-serif;
+}
+.navbar-brand
+{
+    padding-left: 10px;
+}
+.jumbotronDetails
+{
+    background-color:#05192d;
+    color:white;
+    margin-bottom:50px;
+}
+.heading
+{
+    margin-top: 100px;
+    padding: 0 10px;
+}
+.freeCourse
+{
+    color:#03ef62;
+    letter-spacing:1px;
+}
+.courseName
+{
+    color:white;
+    letter-spacing:1px;
+}
+.intro
+{
+     color:white;
+     font-weight:100;
+}
+#signUp
+{
+    color:white;
+    font-weight:700;
+    font-size:20px;
+    letter-spacing:1px;
+    height:65px;
+    width:40%;
+    background-color:#03ef62;
+    border-radius:10px;
+    border-width:0px;
+    margin-bottom:10px;
+    min-width:180px;
+}
+#signUp:hover
+{
+    background-color:#65ff8f;
+    cursor:pointer;
+}
+.courseCards
+{
+    margin:auto;
+    margin-top:15px;
+    justify-content:space-between;
+}
+.courseCard
+{
+    background-color:#213147;
+    text-align:center;
+    width:23.5%;
+    padding: 6px 0;
+}
+.details 
+{
+    background-color: #213147;
+    color: white;
+    font-weight: 600;
+}
+.choiceBtn
+{
+    width: 28.5%;
+    text-align: center;
+    padding: 6px 0;
+}
+.companyLogo
+{
+    margin-top:100px;
+    text-align:center;
+    padding-top: 130px;
+    padding-left: 81px;
+}
+.aboutCourse
+{
+    margin-bottom:50px;
+    padding-left:10px;
+}
+.aboutCourseHead
+{
+    font-weight:600;
+    letter-spacing:1px;
+}
+.certificateDiv
+{
+    text-align:center;
+}
+#certificate
+{
+    height:80%;
+    width:80%;
+}
+.learningHeading
+{
+    margin-top:80px;
+    text-align:center;
+    margin-bottom:60px;
+}
+.learning
+{
+    margin:auto;
+    border: 1px solid lightgray;
+    border-left-color:lightblue;
+    border-left-width:8px;
+    width:80%;
+}
+.learning:hover
+{
+    border-left-color:deepskyblue;
+}
+.learnNumber
+{
+    text-align:center;
+    padding-top:20px;
+    font-size:40px;
+    color:gray;
+    font-weight:700;
+}
+.learnContent
+{
+    padding-top:20px;
+    padding-bottom:20px;
+}
+.projectDiv
+{
+    justify-content:center;
+}
+.projects
+{
+    text-align:center;
+    border:1px solid lightgray;
+    margin:0 20px;
+    margin-bottom: 10px;
+}
+.projects:hover
+{
+    -webkit-box-shadow: 0 0 10px rgb(211,211,211);
+    -moz-box-shadow: 0 0 10px rgb(192,192,192);
+    box-shadow: 0 0 10px rgb(192,192,192);
+}
+.projectPicture
+{
+    height:50%;
+    width:100%;
+}
+.teachCenter
+{
+    margin: 15px 0;
+}
+.teacherPicture
+{
+    height:130px;
+    border-radius:50px;
+    background-color:gray;
+}
+.teachDetails
+{
+    font-size:17px;
+    color:gray;
+    padding-left:50px;
+}
+.reviewBox
+{
+    margin: 0 40px;
+    margin-bottom:20px;
+    padding-bottom:20px;
+    border:1px solid lightgray;
+    text-align:center;
+    min-height:200px;
+}
+.reviewBox:hover
+{
+    -webkit-box-shadow: 0 0 10px rgb(211,211,211);
+    -moz-box-shadow: 0 0 10px rgb(192,192,192);
+    box-shadow: 0 0 10px rgb(192,192,192);
+}
+.askUser
+{
+    margin-top:50px;
+    color:white;
+    letter-spacing:1px;
+    text-align:center;
+    padding-top:130px;
+    background-color:#7933ff;
+    height:400px;
+}
+footer
+{
+    background-color:#05192d;
+    color:white;
+    padding-top:70px;
+    font-weight:bold;
+}
+ul
+{
+    padding:0;
+    list-style:none;
+    line-height: 2;
+}
+div>span
+{
+    font-weight:500;
+    font-size:77%;
+    margin-bottom:20px;
+}
+.bottomContent
+{
+    margin: 10px 0;
+}
+
+.justify-content-center
+{
+    justify-content: center !important;
+    padding: 0 10px;
+}
+
+.signUpModal
+{
+    position:fixed;
+    top:50%;
+    left:50%;
+    background-color:white;
+    transform:translate(-50%, -50%) scale(0);
+    transition:200ms ease-in-out;
+    border:1px solid black;
+    border-radius:5px;
+    z-index:1040;
+    max-width:400px;
+}
+.signUpModal.active
+{
+    transform:translate(-50%, -50%) scale(1);
+}
+.signUpModal-header
+{
+    padding:10px 15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid black;
+}
+.signUpModal-header .title
+{
+    font-size:1.25em;
+    font-weight:bold;
+}
+.signUpModal-header .close-button
+{
+    cursor:pointer;
+    border:none;
+    outline:none;
+    background:none;
+    font-size:1.5rem;
+    font-weight:bold;
+}
+.signUpModal-body
+{
+    padding:10px 15px;
+    margin: 10px 15px;
+}
+form>input
+{
+    height:50px;
+    border:1px solid gray;
+    margin:5px 0;
+    width:100%;
+}
+#overlay
+{
+    position:fixed;
+    opacity:0;
+    transition:200ms ease-in-out;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:rgba(0,0,0,0.5);
+    pointer-events:none;
+}
+#overlay.active
+{
+    opacity:1;
+    pointer-events:all;
+}
+input
+{
+    padding:10px;
+}
+input:focus
+{
+    outline:none;
+    padding-left:10px;
+}
+input:focus:invalid
+{
+    border:2px solid red;
+}
+input:focus:valid
+{
+    border: 2px solid green;
+}
